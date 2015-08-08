@@ -1,0 +1,39 @@
+footer{
+  padding: 12px 5% 20px 5%;
+  box-sizing:border-box;
+  color:@background;
+  background-color: @primaryColor;
+  p{
+    margin: 10px 0 0;
+    color:@background;
+    @media screen and (max-width: @grid) {
+      position: absolute;
+      text-align: center;
+      bottom: 0px;
+      width: 100%;
+    }
+  }
+  .social-icons{
+    position: absolute;
+    right:0;
+    right: 0;
+    top: 13px;
+    .fa{
+      color:@background;
+      display: inline-block;
+      margin-left:14px;
+      .transition(color, .5s);
+      &:hover{
+        color:@darkPrimary;
+        .transition(color, .5s);
+      }
+    }
+    @media screen and (max-width: @grid) {
+      position: relative;
+      top: auto;
+      text-align: center;
+      padding-bottom: 30px;
+      padding-top: 10px;
+    }
+  }
+}

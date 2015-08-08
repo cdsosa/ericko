@@ -1,0 +1,119 @@
+.single {
+
+  background-color: #fff;
+  padding: 50px 5% 30px;
+  .box-sizing(border-box);
+  margin-top: -165px;
+
+  h1{
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  .date{
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+
+  h2{
+    font-size: 92pt;
+  }
+
+  p{
+    text-align: left;;
+  }
+
+  .instagram-media {
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+
+  .wix {
+
+    a {
+      color: @darkPrimary;
+    }
+
+    h1, h2 ,h3, h4, h5, p {
+      margin-bottom: 20px;
+      color: @textColor;
+      text-transform: none;
+    }
+
+    h6 {
+      color: @primaryColor;
+      margin-bottom: 10px;
+    }
+
+    .code p{
+      margin-bottom: 10px;
+    }
+
+    .aligncenter{
+      margin: 0 auto;
+      display: block;
+    }
+
+    iframe {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .player {
+    width: 50%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+
+    &.pedro {
+      h2,h5,.bar {
+        color: #25cbd3 !important;
+      }
+    }
+
+    h5 {
+      margin: 20px 0 15px;
+    }
+  }
+
+  .data {
+
+    .bar {
+      height: 15px;
+      width: 200px;
+      background: @altGrey;
+      opacity: .15;
+      display: block;
+      margin: 16px auto;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .logo {
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: @grid) {
+
+    padding-top: 20px !important;
+
+    //Force Embed Full Widths
+
+    .flickr-embed-frame,
+    .size-full,
+    .vimeo-video {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    .vimeo-video{
+      min-height: 280px;
+    }
+  }
+
+}

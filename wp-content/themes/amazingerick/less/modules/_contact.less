@@ -1,0 +1,67 @@
+.wpcf7{
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  input, textarea {
+    width: 100%;
+    border: 2px solid @primaryColor;
+    float: left;
+    margin-top: 10px;
+    font-size: 12pt;
+    outline:none;
+    color:darken(@textColor, 10%);
+    background-color: @background;
+    padding:8px 12px;
+    border-radius: 6px;
+    @media (max-width: @tablet){
+      width: 95%;
+    }
+  }
+  textarea{
+    height:128px;
+  }
+  p{
+    margin-bottom: 22px;
+    float: left;
+    width: 100%;
+  }
+  .wpcf7-submit{
+    width: 130px;
+    color:@primaryColor;
+    background-color: transparent;
+    border: 2px solid @primaryColor;
+    &:hover{
+      background-color: @primaryColor;
+      color:@background;
+    }
+  }
+}
+
+/* CF7 */
+.wpcf7-response-output {
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  width: 320px;
+  margin: 0 auto;
+  padding: 8px 5%;
+  font-family: @primaryFont;
+  &.wpcf7-mail-sent-ok {
+    color: green;
+  }
+}
+
+.wpcf7-not-valid-tip{
+  color:red;
+}
+
+.wpcf7-display-none{
+  background-color: transparent;
+}
+/* CF7 END*/
+
+.contact-mod {
+  margin-bottom:0;
+}

@@ -1,0 +1,110 @@
+.gridObjects aside{
+  float: left;
+  width: 246px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-block;
+  background-color: @primaryColor;
+  text-align: left;
+  color: #fff;
+  .box-sizing(border-box);
+  padding:15px 0 15px 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  img, .text{
+    z-index: 2;
+    position: relative;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  button{
+    margin:0 auto;
+  }
+
+  .link {
+    display: block;
+    position: relative;
+
+    .overlay {
+      background-color: @darkPrimary;
+      opacity: 0;
+      .transition(opacity .4s);
+      position: absolute;
+      height: 122px;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .fa{
+      padding: 5px;
+      position: absolute;
+      color: @darkPrimary;
+      position: absolute;
+      z-index: 5;
+      opacity: 0;
+      top: 85px;
+      left: 111px;
+      .transition(opacity, top, .4s);
+      background: rgba(250,250,250,.9);
+      border-radius: 5px;
+    }
+
+
+    &:hover {
+      .overlay {
+        opacity: .55;
+        .transition(opacity .4s);
+      }
+      .fa {
+        opacity: 1;
+        top: 46px;
+        .transition(opacity, top, .4s);
+      }
+    }
+  }
+
+  .text{
+    padding: 0 15px;
+    margin-top: 20px;
+    h6{
+      color: @darkPrimary;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    p{
+      color: @background;
+      margin-bottom: 25px;
+    }
+    a {
+      p, .fa {
+        display: inline-block;
+      }
+      .fa{
+        color: @background;
+        width: 0;
+        overflow: hidden;
+        .transition( width .4s);
+        top: 4px;
+        position: relative;
+
+      }
+      &:hover p, &:hover .fa{
+        color: darken(@darkPrimary, 5%);
+      }
+    }
+  }
+
+  &:hover .text a .fa{
+    width: 17px;
+    .transition( width .4s)
+  }
+
+}

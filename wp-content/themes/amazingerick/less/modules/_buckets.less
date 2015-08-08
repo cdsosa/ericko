@@ -1,0 +1,92 @@
+.bucket {
+  .object {
+    position: relative;
+    width: 310px;
+    display: inline-block;
+    background-color: @background;
+    margin: 0 43px 50px 0;
+    padding: 25px;
+    .box-sizing(border-box);
+    overflow: hidden;
+    border-radius: 10px;
+    &:nth-of-type(3n+3){
+      margin-right: 0;
+    }
+    img{
+      text-align: center;
+      display: block;
+    }
+    @media (max-width: @grid) {
+      width: 90%;
+      height: auto;
+      margin: 0 5% 40px 5%;
+      min-height: initial !important;
+    }
+    @media (max-width: @tablet) {
+      width: 100%;
+      height: auto;
+      margin: 0 0 40px 0;
+      min-height: initial !important;
+    }
+  }
+  .twitter-post {
+    min-height: 240px;
+    img {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 10px;
+    }
+
+    h5 {
+      position: absolute;
+      left: 70px;
+      top: 27px;
+      text-transform: none;
+    }
+    a{
+      display: block;
+    }
+    p, small {
+      width: 100%;
+      margin-top: 10px;
+      position: relative;
+    }
+    button{
+      margin-top: 20px;
+      overflow: hidden;
+    }
+  }
+  .boxed{
+    margin-bottom: 60px;
+    background-color: @primaryColor;
+    .transition(background-color .4s);
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &:hover{
+      background-color:@darkPrimary;
+      .transition(background-color .4s);
+    }
+    @media (max-width: @tablet){
+      margin-top: auto;
+      margin-bottom: 20px;
+    }
+  }
+  .post{
+    border-radius: 0;
+    height: 320px;
+    height: 320px;
+
+    .post-content-thumb{
+      background: @altLightGrey;
+      padding: 15px;
+      height:75px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}

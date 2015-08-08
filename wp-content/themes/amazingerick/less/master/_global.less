@@ -1,0 +1,264 @@
+h1, h2, h3, h4, h5, button,span{
+  font-family: @primaryFont;
+  line-height: 1.4em;
+  text-transform:uppercase;
+  color: @primaryColor;
+}
+
+h1 {
+  font-size: 2.8em;
+  @media (max-width: @tablet){
+    font-size: 2em;
+  }
+}
+h2 {
+  font-size: 2.8em;
+  @media (max-width: @tablet){
+    font-size: 2em;
+  }
+}
+h3 {
+  font-size: 2.5em;
+  @media (max-width: @tablet){
+    font-size: 2em;
+  }
+}
+h4 {
+	font-size: 2em;
+  @media (max-width: @tablet){
+    font-size: 1.5em;
+  }
+}
+h5 {
+  font-size: 1.5em;
+  @media (max-width: @tablet){
+    font-size: 1.3em;
+  }
+}
+h6 {
+  font-size: 1em;
+  font-family: @primaryFont;
+  @media (max-width:@grid) {
+  font-size: .8em;
+  }
+}
+
+h6,p,li,small{
+  color:@textColor;
+}
+
+p,li {
+	font-size: .9em;
+	font-weight: 400;
+    line-height: 1.6em;
+    font-family: 'Open Sans', sans-serif;
+  @media (max-width:@grid) {
+    font-size: .8em;
+  }
+}
+
+p a {
+  color: @darkPrimary;
+}
+small {
+  font-size: .8em;
+  font-weight: 400;
+  line-height: 1.35;
+  font-family: 'Open Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+em{
+  font-style: italic;
+  font-family: @primaryFont;
+  display: block;
+}
+
+pre{
+  font-size: .8em;
+}
+
+.date{
+  color:@altGrey;
+  font-style: italic;
+}
+
+section{
+  width: 100%;
+}
+
+button, [type*="submit"] {
+  .border-radius (@radius: 5px);
+  color: @primaryColor;
+  border: 2px solid @primaryColor;
+  padding: 6px 10px;
+  font-size: 12pt;
+  cursor:pointer;
+  .transition(background-color .4s);
+  .fa {
+    padding-left: 10px;
+  }
+  a {
+    color:@primaryColor;;
+    .transition(color .4s);
+  }
+  &:hover{
+    background-color: @primaryColor;
+    .transition(background-color .4s);
+    color: @background;
+    a{
+      color: @background;
+      .transition(color .4s);
+    }
+  }
+  &.white-bg{
+    background-color: #ffffff;
+    .transition(all, @duration);
+    &:hover{
+      color: #ffffff;
+      background-color: @primaryColor;
+      .transition(all, @duration);
+    }
+  }
+  &.reversed{
+    color: @background;
+    border: 2px solid @background;
+    &:hover{
+      background-color: @background;
+      .transition(background-color .4s);
+      color: @primaryColor;
+      a{
+        color: @primaryColor;
+        .transition(color .4s);
+      }
+    }
+  }
+}
+
+.grid {
+  width:@grid;
+  margin: 0 auto;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+  @media screen and (max-width: @grid) {
+    width: 100%;
+    &.gridObjects{
+      width: 90%;
+      padding:0 5% 30px;
+    }
+  }
+}
+
+ol,ul{
+  margin-left: 30px;
+}
+
+ol{
+  list-style-type: decimal;
+}
+
+ul{
+  li{
+    list-style-type: disc;
+    display: list-item;
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: @secondaryColor;
+  background: @primaryColor;
+}
+
+::selection {
+  color: @secondaryColor;
+  background: @primaryColor;
+}
+
+div[class^="col"] {
+  float: left;
+  display: inline-block;
+  padding: 0 5%;
+  .box-sizing(border-box);
+  &:first-of-type{
+    padding-left: 0;
+  }
+  &:last-of-type{
+    padding-right: 0;
+  }
+  @media (max-width: @tablet) {
+    width: 100%;
+  }
+}
+
+.primary {
+  color: @darkPrimary;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.col-50 {
+  width: 50%;
+}
+
+.col-25 {
+  width: 25%;
+}
+
+.col-33 {
+  width: 33.33%;
+}
+
+.col-75 {
+  width: 75%;
+}
+
+pre{
+  background-color: @altLightGrey;
+  border-radius: 4px;
+  padding: 15px;
+  color:@textColor;
+  .box-sizing(border-box);
+  overflow: hidden;
+  display: block;
+  font-family: Consolas, Monaco, "Courier New", Courier, monospace;
+  margin-bottom: 25px;
+}
+
+.truncate {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.article-read-more {
+  margin-top: 10px;
+  display: block;
+  .fa {
+    margin-left: 10px;
+    font-size: 14pt;
+  }
+}
+
+.black-overlay&:before {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, .55);
+  height: 100%;
+  width: 100%;
+}
+
+.hide-tablet {
+  @media screen and (max-width: @tablet){
+    display: none !important;
+  }
+}
+
+//Admin
+.customize-support {
+  margin-top: 32px;
+}

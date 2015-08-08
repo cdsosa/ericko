@@ -1,0 +1,153 @@
+.gridObjects {
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 40px 0;
+  &.buffer-top{
+    padding-bottom: 0 !important;
+  }
+
+  h1,h2 {
+    text-align: center;
+    margin: 0 0 40px;
+    color:@primaryColor;
+    .box-sizing(border-box);
+  }
+
+  > h2{
+    @media screen and (max-width: @grid) {
+      margin-top: 30px;
+    }
+  }
+
+  //Home-About
+  .circleIMG{
+    .border-radius (@radius: 50%);
+    width:350px;
+    display: block;
+    margin: 20px auto 20px;
+    max-width: 100%;
+    @media (max-width: @tablet){
+      width:200px;
+    }
+  }
+  .aboutME {
+    margin-top: 140px;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    @media (max-width: 400px) {
+      width: 80%;
+    }
+  }
+
+  //Home-Services
+  .icons {
+    margin: 0 0 40px;
+    text-align: center;
+    overflow: hidden;
+    a{
+      margin: 0 auto;
+      text-align: center;
+      width: 125px;
+      display: inline-block;
+      margin:0 45px;
+      position:relative;
+      .transition(all .5s);
+      @media (max-width: @grid) {
+        width: 20%;
+        float: left;
+        margin: 0 15%;
+        height: 250px;
+      }
+      @media (max-width: 786px) {
+        width: 30%;
+        float: left;
+        margin: 0 10%;
+      }
+      @media (max-width: 500px) {
+        width: 36%;
+        float: left;
+        margin: 0 7%;
+      }
+      img{
+        width: 100%;
+      }
+      h6{
+        margin: 20px auto 0;
+        text-align: center;
+        @media (max-width: @grid) {
+          margin: 0px auto 40px;
+        }
+      }
+      &:hover{
+        opacity: .5;
+        .transition(all .4s);
+      }
+    }
+  }
+  button{
+    margin: 40px auto 0;
+    display: block;
+    overflow: hidden;
+    @media (max-width: @tablet) {
+      margin: 0 auto 20px;
+    }
+  }
+
+  //Portfolio
+  &.portfolio-mod {
+    h5{
+      margin-bottom: 20px;
+    }
+    .object {
+      width: 33%;
+      height: 250px;
+      display: block;
+      float: left;
+      display: inline-block;
+      overflow: hidden;
+      @media(max-width: @tablet) {
+        width: 100%;
+      }
+      .overlay{
+        position: absolute;
+        background-color: rgba(15, 189, 160, .9);
+        height: 100%;
+        width: 101%;
+        opacity: 0;
+        .transition(opacity, .4s);
+        &:hover{
+          opacity: 1;
+          .transition(opacity, .4s);
+        }
+      }
+      h5 {
+        margin-top: 110px;
+        text-align: center;
+        padding: 0 20%;
+        color:#fff;
+        margin-bottom: auto;
+        @media (max-width: @grid) {
+          text-align: center;
+        }
+      }
+      .download {
+        p {
+          text-align: center;
+        }
+        .fa {
+          margin-left: 20px;
+        }
+      }
+
+    }
+  }
+
+  //Text-box
+  .text-box{
+    background-color: lighten(@altLightGrey, 10%);
+    padding: 5%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+}
