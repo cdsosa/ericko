@@ -1551,6 +1551,16 @@ div.content.single-client.portfolio-mod .object {
   box-sizing: border-box;
   margin-top: -165px;
 }
+@media screen and (max-width: 768px) {
+  .single {
+    margin-top: -230px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .single {
+    margin-top: -330px;
+  }
+}
 .single h1 {
   text-align: left;
   margin-bottom: 15px;

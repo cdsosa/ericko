@@ -27,12 +27,12 @@
 
             <div class="data">
 
-                <h2>1</h2>
+                <h2>2</h2>
 
                 <div class="bar">
                 </div>
 
-                <div class="bar">
+                <div class="bar active">
                 </div>
 
                 <div class="bar active">
