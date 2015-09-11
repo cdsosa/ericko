@@ -22,6 +22,10 @@
   &:last-of-type{
     margin-bottom:0;
   }
+  @media screen and (max-width:@grid) {
+    width: 100%;
+    padding: 30px 0 40px;
+  }
 }
 .imgRow{
   height: 200px;
@@ -31,7 +35,7 @@
     margin-bottom: 20px;
   }
   img{
-    width: 100%;
+    width: 200px;
   }
 }
 
@@ -39,7 +43,7 @@
   padding-bottom: 20px;
   @media (max-width: @grid) {
     padding-left: 0;
-    width: 100%;
+    width: 90% !important;
   }
   h5,p{
     margin-bottom: 8px;

@@ -31,6 +31,9 @@
         right: 10px;
         top: 15px;
         color: #ffffff;
+        @media (max-width: @grid){
+          display: none;
+        }
       }
 
       p{
@@ -134,7 +137,7 @@
   .box-sizing(border-box);
 
   @media screen and (max-width: (@grid + 60)) {
-    padding: 0 2.5%;
+    padding: 0 2%;
   }
   @media screen and (max-width: @min-grid) {
     width: 50%;
