@@ -241,9 +241,6 @@ em {
   font-family: 'Montserrat', sans-serif;
   display: block;
 }
-pre {
-  font-size: .8em;
-}
 .date {
   color: #969696;
   font-style: italic;
@@ -1598,6 +1595,11 @@ div.content.single-client.portfolio-mod .object {
 }
 .single .wix .code p {
   margin-bottom: 10px;
+}
+.single .wix pre,
+.single .wix code {
+  font-size: .8em;
+  line-height: 1.4em;
 }
 .single .wix .aligncenter {
   margin: 0 auto;
