@@ -10,10 +10,7 @@ get_header(); ?>
 
     <!--    <video autoplay="false" loop="loop"><source src="--><?php //echo get_template_directory_uri(); ?><!--/video/movie.mp4" type="video/mp4"></source></video>-->
     <div class="tagline">
-        <div class="cta">
-            <h3 class="no-caps">I am a remote Creative Web Developer</h3>
-<!--            <button>View My Portfolio</button>-->
-        </div>
+        <h3 class="no-caps">I am a remote Creative Web Developer</h3>
     </div>
 </section>
 
