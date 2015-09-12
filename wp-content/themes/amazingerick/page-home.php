@@ -86,7 +86,7 @@ wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the pa
 
                 <?php endwhile;
             endif;
-            wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+            wp_reset_postdata();  ?>
 
         </div>
 
@@ -94,13 +94,13 @@ wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the pa
 
     <div class="home-sidebar">
 
-        <?php get_template_part('template-parts/about-me') ?>
-
-        <?php get_template_part('template-parts/feature-post') ?>
-
         <?php get_template_part('template-parts/services-module') ?>
 
         <?php get_template_part('template-parts/map-module') ?>
+
+        <?php get_template_part('template-parts/feature-post') ?>
+
+        <?php get_template_part('template-parts/about-me') ?>
 
     </div>
 

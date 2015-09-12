@@ -1,28 +1,28 @@
-$RECYCLE.BIN/
-*.*~
-*.log
-*.pid
-*.un~
-*~
-.*.sw[a-z]
-.DS_Store
-.Spotlight-V100
-.Trashes
-.\#*
-._*
-.directory
-.elc
-/.emacs.desktop
-/.emacs.desktop.lock
-Desktop.ini
-Session.vim
-Thumbs.db
-\#*\#
-auto-save-list
-log
-logs
-temp
-tmp
-tramp
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
 
+# Logs and databases #
+######################
+*.log
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+.idea/
+.idea/*
+
+# WordPress #
+######################
+wp-config.php
+.htaccess
 /wp-content/uploads/*
