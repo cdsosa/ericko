@@ -39,13 +39,6 @@
             icon: "<?php echo get_template_directory_uri(); ?>/img/marker/marker-PowerGuard.png"
         });
 
-        new google.maps.Marker({
-            animation: google.maps.Animation.DROP,
-            position: new google.maps.LatLng(40.5731830, -111.9112850),
-            map: map,
-            icon: "<?php echo get_template_directory_uri(); ?>/img/marker/marker-ErickOlivares.png"
-        });
-
     }
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
