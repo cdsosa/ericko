@@ -860,12 +860,21 @@ class CF7DBPlugin extends CF7DBPluginLifeCycle implements CFDBDateFormatter {
     public function createAdminMenu() {
         $roleAllowed = 'Administrator';
         $displayName = $this->getPluginDisplayName();
-        if ('false' == $this->getOption('HideAdminPanelFromNonAdmins', 'false')) {
+
+        $hideFromNonAdmins = $this->getOption('HideAdminPanelFromNonAdmins', 'false') != 'false';
+        if ($hideFromNonAdmins) {
+            $roleAllowed = 'Administrator';
+        } else {
             $roleAllowed = $this->getRoleOption('CanSeeSubmitData');
             if (!$roleAllowed) {
                 $roleAllowed = 'Administrator';
             }
         }
+
+        if (! $this->isUserRoleEqualOrBetterThan($roleAllowed)) {
+            return;
+        }
+
         $menuSlug = $this->getDBPageSlug();
 
         //create new top-level menu
@@ -924,7 +933,7 @@ class CF7DBPlugin extends CF7DBPluginLifeCycle implements CFDBDateFormatter {
                          $this->getShortCodeBuilderPageSlug(),
                          array(&$this, 'showShortCodeBuilderPage'));
 
-        if ($this->isEditorActive()) {
+        if ($this->isEditorActive() && $this->canUserDoRoleOption('CanSeeSubmitData')) {
             add_submenu_page($menuSlug,
                     $displayName . ' Import',
                 __('Import', 'contact-form-7-to-database-extension'),
