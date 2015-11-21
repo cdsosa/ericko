@@ -8,7 +8,16 @@ get_header(); ?>
 
 <?php
 
-    $the_query = new WP_Query(array('post_type' => array('portfolio','post'),'posts_per_page' => 1, 'order'   => 'DSC', ));
+    $the_query = new WP_Query(
+        array(
+            'post_type' => array(
+                'portfolio','post'
+            ),
+            'posts_per_page' => 1,
+            'category__not_in'=> 4,
+            'order'   => 'DSC',
+        )
+    );
     if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post();?>
 
         <?php
@@ -40,7 +49,18 @@ wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the pa
 
         <div class="home-content">
 
-            <?php $the_query = new WP_Query(array('post_type' => array('portfolio','post'),'order'   => 'DSC', 'offset' => 1, 'posts_per_page' => 1 ));
+            <?php $the_query = new WP_Query(
+                array(
+                    'post_type' =>
+                        array(
+                            'portfolio','post'
+                        ),
+                    'order'   => 'DSC',
+                    'offset' => 1,
+                    'posts_per_page' => 1,
+                    'category__not_in'=> 4,
+                )
+            );
             if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post();?>
 
                 <?php
@@ -67,7 +87,17 @@ wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the pa
 
                 <div class="article-list">
 
-                <?php $the_query = new WP_Query(array('post_type' => array('portfolio','post'),'order'   => 'DSC', 'offset' =>2, 'posts_per_page' => 6 ));
+                <?php $the_query = new WP_Query(
+                    array(
+                        'post_type' =>
+                            array(
+                                'portfolio','post'
+                            ),
+                        'order'   => 'DSC', 'offset' =>2,
+                        'posts_per_page' => 6,
+                        'category__not_in'=> 4,
+                    )
+                );
                     if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post();?>
 
                         <?php
