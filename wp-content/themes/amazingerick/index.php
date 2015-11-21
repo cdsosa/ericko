@@ -6,38 +6,42 @@ Template Name: Labs
 
 get_header(); ?>
 
-    <div class="grid gridObjects">
+    <section>
 
-        <h1>LABS</h1>
+        <div class="grid gridObjects">
 
-        <div class="masonary">
+            <h1>LABS</h1>
 
-                <div class="item-sizer"></div>
+            <div class="masonary">
 
-                <?php
-                while ( have_posts() ) : the_post(); ?>
+                    <div class="item-sizer"></div>
 
-                    <a href="<?php the_permalink(); ?>" class="item">
-                        <div class="post">
-                            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-                            <?php if ($image) { ?>
-                            <div class="slideImage" style="background-image: url('<?php echo $image[0]; ?>')">
+                    <?php
+                    while ( have_posts() ) : the_post(); ?>
+
+                        <a href="<?php the_permalink(); ?>" class="item">
+                            <div class="post">
+                                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                                <?php if ($image) { ?>
+                                <div class="slideImage" style="background-image: url('<?php echo $image[0]; ?>')">
+                                </div>
+                                <?php } ?>
+                                <p><?php echo get_the_date(); ?></p>
+                                <h5><?php the_title(); ?></h5>
+                                <p><?php the_excerpt(); ?></p>
                             </div>
-                            <?php } ?>
-                            <p><?php echo get_the_date(); ?></p>
-                            <h5><?php the_title(); ?></h5>
-                            <p><?php the_excerpt(); ?></p>
-                        </div>
-                    </a>
+                        </a>
 
-                            <?php
-                        endwhile;
-                    wp_reset_postdata();
-                ?>
+                                <?php
+                            endwhile;
+                        wp_reset_postdata();
+                    ?>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
     <script src="<?php echo get_template_directory_uri(); ?>/js/masonry.min.js"></script>
 

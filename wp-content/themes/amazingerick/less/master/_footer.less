@@ -1,23 +1,30 @@
 footer{
-  padding: 12px 5% 20px 5%;
   box-sizing:border-box;
   color:@background;
   background-color: @primaryColor;
-  p{
-    margin: 10px 0 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  .grid{
+    padding: 20px 5% 20px 5%;
+    .box-sizing(border-box)
+  }
+  p.footer-line{
     color:@background;
+    font-size: .7em;
     @media screen and (max-width: @grid) {
       position: absolute;
       text-align: center;
-      bottom: 0px;
-      width: 100%;
+      bottom: 17px;
+      width: 90%;
     }
   }
   .social-icons{
     position: absolute;
     right:0;
     right: 0;
-    top: 13px;
+    top: 24px;
     .fa{
       color:@background;
       display: inline-block;

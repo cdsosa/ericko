@@ -6,8 +6,11 @@ Template Name: Clients
 
 get_header(); ?>
 
-<section class="grid gridObjects bucket">
-    <h1>Clients</h1>
+<section>
+
+    <div class="grid gridObjects bucket">
+
+        <h1>Clients</h1>
 
         <?php
 
@@ -26,6 +29,8 @@ get_header(); ?>
 
             <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
         <?php endif; ?>
+
+    </div>
 
 </section>
 
@@ -83,7 +88,7 @@ get_header(); ?>
             google.maps.event.addDomListener(window, 'load', initialize);
         </script>
 
-        <div id="map-canvas" style="width:100%;height:600px;"></div>
+        <section id="map-canvas" style="width:100%;height:600px;"></section>
 
     </div>
 

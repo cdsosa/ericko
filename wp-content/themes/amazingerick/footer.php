@@ -1,15 +1,15 @@
-<section class="contact-mod">
-    <div class="contact-info">
-        <h5 class="center">Let's work together</h5>
-        <p>I'm currently taking on select development and design projects.</p>
-    </div>
-    <?php the_field('contact_form', 'option'); ?>
-</section>
-
 <footer>
+    <section class="contact-mod">
+        <div class="contact-info">
+            <h5 class="center">Let's work together</h5>
+            <p>I'm currently taking on select development and design projects.</p>
+        </div>
+        <?php the_field('contact_form', 'option'); ?>
+    </section>
+
     <div class="grid">
 
-        <p>&copy; 2015 Erick Olivares&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provo, Utah</p>
+        <p class="footer-line">&copy; 2015 Erick Olivares&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provo, Utah</p>
 
         <div class="social-icons">
             <a href="https://www.behance.net/erickolivares" target="_blank">

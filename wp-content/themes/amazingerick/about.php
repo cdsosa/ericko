@@ -14,19 +14,20 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="grid gridObjects text-box">
-    <h1>About Erick</h1>
+<section>
+    <div class="grid gridObjects text-box">
+        <h1>About Erick</h1>
 
-    <div class="text-box">
-        <?php foreach( $posts as $post):  ?>
-            <?php setup_postdata($post); ?>
+        <div class="text-box">
+            <?php foreach( $posts as $post):  ?>
+                <?php setup_postdata($post); ?>
 
-                <?php the_content(); ?>
+                    <?php the_content(); ?>
 
-            <?php endforeach; ?>
-        <?php wp_reset_postdata(); ?>
+                <?php endforeach; ?>
+            <?php wp_reset_postdata(); ?>
+        </div>
     </div>
-
 </section>
 
 <section class="full-width">

@@ -6,26 +6,31 @@ Template Name: Portfolio
 
 get_header(); ?>
 
-<section class="grid gridObjects portfolio-mod">
-    <h1>Portfolio</h1>
+<section class="portfolio-mod">
 
-    <?php
-    $posts = get_field('choose_client');
+    <div class="grid gridObjects portfolio-mod">
 
-    if( $posts ): ?>
-        <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-            <?php setup_postdata($post); ?>
+        <h1>Portfolio</h1>
 
-            <a href="<?php the_permalink(); ?>" class="object slideImage" style="background-image: url('<?php the_field('logo'); ?>')">
-                <div class="overlay slideImage">
-                    <h5 class="tagline"><?php the_title();?></h5>
-                </div>
-            </a>
+        <?php
+        $posts = get_field('choose_client');
 
-        <?php endforeach; ?>
+        if( $posts ): ?>
+            <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+                <?php setup_postdata($post); ?>
 
-        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-    <?php endif; ?>
+                <a href="<?php the_permalink(); ?>" class="object slideImage" style="background-image: url('<?php the_field('logo'); ?>')">
+                    <div class="overlay slideImage">
+                        <h5 class="tagline"><?php the_title();?></h5>
+                    </div>
+                </a>
+
+            <?php endforeach; ?>
+
+            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+        <?php endif; ?>
+
+    </div>
 
 </section>
 
