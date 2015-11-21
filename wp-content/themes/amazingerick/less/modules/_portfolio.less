@@ -1,0 +1,54 @@
+//Portfolio
+.portfolio-mod {
+  h5{
+    margin-bottom: 20px;
+  }
+  .object {
+    width: 33%;
+    height: 250px;
+    display: block;
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    @media(max-width: @tablet) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .overlay{
+      position: absolute;
+      background-color: rgba(15, 189, 160, .9);
+      height: 100%;
+      width: 101%;
+      opacity: 0;
+      .transition(opacity, .4s);
+      h5 {
+        margin-top: 100px;
+        text-align: center;
+        padding: 0 20%;
+        color:#fff;
+        margin-bottom: auto;
+        .transition(all, .4s);
+        top: -40px;
+        @media (max-width: @grid) {
+          text-align: center;
+        }
+      }
+      &:hover{
+        opacity: 1;
+        .transition(all, .4s);
+        h5{
+          top: 0px;
+        }
+      }
+    }
+    .download {
+      p {
+        text-align: center;
+      }
+      .fa {
+        margin-left: 20px;
+      }
+    }
+
+  }
+}
