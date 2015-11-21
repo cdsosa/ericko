@@ -31,7 +31,6 @@ get_header(); ?>
             <div class="grid">
                 <a href="<?php the_permalink(); ?>" class="post-content">
                     <h1><?php the_title(); ?></h1>
-                    <p class="date"><?php echo get_the_date(); ?></p>
                     <p><?php the_excerpt(); ?></p>
                     <span class="article-read-more">Read More<i class="fa fa-caret-right"></i> </span>
                 </a>
@@ -73,7 +72,6 @@ wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the pa
                     <div class="slideImage full-block" style="background-image: url('<?php echo $image ?>')">
                         <a href="<?php the_permalink(); ?>" class="block-post-content">
                             <h6><?php the_title(); ?></h6>
-                            <p class="date"><?php echo get_the_date(); ?></p>
                             <p><?php the_excerpt(); ?></p>
                             <span class="article-read-more">Read More<i class="fa fa-caret-right"></i> </span>
                         </a>
@@ -107,10 +105,10 @@ wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the pa
 
                         <a href="<?php the_permalink(); ?>" class="article-post-wrap">
                             <div class="article-image slideImage" style="background-image:url('<?php if ($thumb) { echo $thumb; } else { echo $image[0]; } ?>'); ">
+                                <?php // echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago';?>
                             </div>
                             <div class="article-post">
                                 <h5 class="truncate"><?php the_title(); ?></h5>
-                                <p class="date"><?php echo get_the_date(); ?></p>
                                 <p><?php the_excerpt(); ?></p>
                                 <span class="article-read-more"><?php if ($thumb) { ?>View Project <?php } else { ?> Read More<?php } ?><i class="fa fa-caret-right"></i> </span>
                             </div>

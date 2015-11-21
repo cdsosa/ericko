@@ -618,7 +618,7 @@ nav.mobileNav li a {
 footer {
   box-sizing: border-box;
   color: #ffffff;
-  background-color: #0fbda0;
+  background-color: #0da58c;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -791,7 +791,6 @@ footer .social-icons .fa:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
-  border-radius: 10px;
 }
 .bucket .object:nth-of-type(3n+3) {
   margin-right: 0;
@@ -1035,9 +1034,9 @@ div.content.single-client.portfolio-mod .object {
 .full-width {
   background-color: #0fbda0;
 }
-.full-width h2,
-.full-width h6 {
-  color: #ffffff;
+.full-width .gridObjects > h2,
+.full-width .gridObjects > h6 {
+  color: #ffffff !important;
 }
 .full-width.alt {
   background-color: #ffffff;
@@ -1230,7 +1229,7 @@ div.content.single-client.portfolio-mod .object {
 }
 .gridObjects .text-box {
   background-color: #ffffff;
-  padding: 5%;
+  padding: 0 5% 5%;
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -1377,7 +1376,6 @@ div.content.single-client.portfolio-mod .object {
 .bucket.instagram .object img {
   width: 100%;
   margin-bottom: -5px;
-  border-radius: 10px;
   overflow: hidden;
 }
 @media (max-width: 1024px) {
@@ -1402,7 +1400,6 @@ div.content.single-client.portfolio-mod .object {
   background-color: rgba(250, 250, 250, 0.85);
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   overflow: hidden;
   -webkit-transition: all, 0.4s;
   -moz-transition: all, 0.4s;
