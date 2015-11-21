@@ -20,7 +20,7 @@
         <meta property="og:image" content="<?php if($thumb) { echo $thumb[0]; } else { the_field('logo'); } ?>"/>
     <?php } ?>
 	<!-- FontAwesome -->
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css" />
     <!-- Fonts -->

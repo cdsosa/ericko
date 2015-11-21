@@ -14,7 +14,7 @@ get_header(); ?>
     <?php
     $the_query = new WP_Query(array('post_type' => array('services'),'posts_per_page' => -1, 'order'   => 'ASC', ));
         if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post();?>
-            <section class="full-width alt">
+            <section class="full-width alt wysiwyg">
                 <div class="row" id="<?php the_title();?>">
                     <div class="col-25 imgRow">
                         <img src="<?php the_field('icon');?>">
