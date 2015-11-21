@@ -1,14 +1,12 @@
-<section class="grid gridObjects contact-mod">
-    <h2 class="center">Contact Me</h2>
+<section class="contact-mod">
+    <div class="contact-info">
+        <h5 class="center">Let's work together</h5>
+        <p>I'm currently taking on select development and design projects.</p>
+    </div>
     <?php the_field('contact_form', 'option'); ?>
 </section>
 
-
-
 <footer>
-
-
-
     <div class="grid">
 
         <p>&copy; 2015 All rights reserved Erick Olivares</p>
@@ -43,7 +41,6 @@
 
     <!-- Include js plugin -->
     <script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.masonry.min.js"></script>
     <!-- Include js plugin -->
     <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 

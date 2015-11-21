@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
 
     // Mobile-Nav
 
@@ -17,31 +17,29 @@ $(document).ready(function() {
         }
     });
 
-    $(".accordian > ul > li").click(function(){
+    jQuery(".accordian > ul > li").click(function(){
         //slide up all the link lists
-        $(".accordian > ul > ul").slideUp();
+        jQuery(".accordian > ul > ul").slideUp();
         //slide down the link list below the h3 clicked - only if its closed
-        if(!$(this).next().is(":visible"))
+        if(!jQuery(this).next().is(":visible"))
         {
-            $(this).next().slideDown();
+            jQuery(this).next().slideDown();
         }
     })
 
-    $(".accordian > ul > li").click(function(){
-        $(".accordian > ul > li ").removeClass('rotate');
-        if(!$(this).hasClass('rotate')) {
-            $(this).addClass('rotate');
+    jQuery(".accordian > ul > li").click(function(){
+        jQuery(".accordian > ul > li ").removeClass('rotate');
+        if(!jQuery(this).hasClass('rotate')) {
+            jQuery(this).addClass('rotate');
         }
     })
 
-    // Initialize Masonry
-    $('#content').masonry({
-        columnWidth: 320,
+    var jQuerygrid = jQuery('.masonary').masonry({
         itemSelector: '.item',
-        isFitWidth: true,
-        isAnimated: !Modernizr.csstransitions
+        columnWidth: '.item-sizer',
+        percentPosition: true
     }).imagesLoaded(function() {
-        $(this).masonry('reload');
+        jQuery(this).masonry('reload');
     });
 
 });

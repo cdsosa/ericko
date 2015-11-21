@@ -7,7 +7,7 @@ section{
   width: 100%;
 }
 
-button, [type*="submit"] {
+button {
   .border-radius (@radius: 5px);
   color: @primaryColor;
   border: 2px solid @primaryColor;
@@ -70,7 +70,7 @@ button, [type*="submit"] {
   }
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
   color: @background;
   background: @primaryColor;
 }
@@ -99,7 +99,7 @@ button, [type*="submit"] {
   }
 }
 
-.black-overlay&:before {
+.black-overlay:before {
   content: '';
   position: absolute;
   background-color: rgba(0, 0, 0, .55);

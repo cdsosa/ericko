@@ -44,8 +44,12 @@
     <meta name="theme-color" content="#ffffff">
 
     <!--  jQuery 1.7+  -->
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr-2.5.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <?php
+        //Conflict with Contact Form 7
+        //do_action('wp_head');
+    ?>
 
 </head>
 
