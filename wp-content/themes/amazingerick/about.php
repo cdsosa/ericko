@@ -6,11 +6,31 @@ Template Name: About
 
 get_header(); ?>
 
-<section class="slideImage small" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/backgrounds/shanghai.jpg')">
+<section class="slideImage small-med about-mod" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/backgrounds/shanghai2.jpg')">
 
     <!--    <video autoplay="false" loop="loop"><source src="--><?php //echo get_template_directory_uri(); ?><!--/video/movie.mp4" type="video/mp4"></source></video>-->
     <div class="tagline">
-        <h3 class="no-caps">I am a remote Creative Web Developer</h3>
+        <div class="profile-pic">
+            <img src="https://pbs.twimg.com/profile_images/437519203772268544/-lqauQsB.jpeg">
+        </div>
+        <h1>Erick Olivares</h1>
+        <em class="no-caps">User Expereince Designer and Front-End Developer</em>
+
+        <div class="social-icons">
+            <?php if( have_rows('social_media', 'option') ): ?>
+                <?php while( have_rows('social_media', 'option') ): the_row();
+
+                    $sm_site= get_sub_field('social_media_site');
+                    $sm_url = get_sub_field('social_media_url');
+
+                    ?>
+                    <a href="<?php echo $sm_url ?>" target="_blank">
+                        <i class="fa <?php echo $sm_site ?>"></i>
+                    </a>
+
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
     </div>
 </section>
 

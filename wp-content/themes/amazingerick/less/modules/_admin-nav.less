@@ -1,0 +1,31 @@
+.customize-support nav.admin-nav {
+  display: none;
+}
+
+nav.admin-nav {
+  position: fixed;
+  top:80px;
+  left:15px;
+  z-index: 999999;
+  .box-shadow(2px 1px 8px #3C3C3C;);
+  li {
+    background-size: 100%;
+    background-position: center;
+    list-style: none;
+    background-color: #fff;
+    padding: 2px 10px;
+    font-size: 1.2em;
+    border-top: 1px solid #3C3C3C;
+    .box-sizing(border-box);
+
+    width: 36px;
+    height: 36px;
+    &:hover {
+      background-color: #000;
+      color: #ffffff;
+    }
+  }
+  a:first-of-type li {
+    border-top: 0;
+  }
+}

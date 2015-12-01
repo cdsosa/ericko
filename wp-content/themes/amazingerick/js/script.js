@@ -6,33 +6,21 @@ jQuery(document).ready(function() {
 
     mbutton.click( function() {
 
-        var  mnav = jQuery('.mobileNav');
+        var  mnav = jQuery('.mainMenu');
 
         if (mnav.is(':visible')) {
-            mnav.slideUp(250);
-            ('.cover').show();
+            mnav.fadeOut(225);
+            mnav.removeClass('gloss');
+            mbutton.removeClass('active');
         }
         else {
-            mnav.slideDown(250);
+            mnav.fadeIn(225);
+            mnav.addClass('gloss');
+            mbutton.addClass('active');
         }
     });
 
-    jQuery(".accordian > ul > li").click(function(){
-        //slide up all the link lists
-        jQuery(".accordian > ul > ul").slideUp();
-        //slide down the link list below the h3 clicked - only if its closed
-        if(!jQuery(this).next().is(":visible"))
-        {
-            jQuery(this).next().slideDown();
-        }
-    })
-
-    jQuery(".accordian > ul > li").click(function(){
-        jQuery(".accordian > ul > li ").removeClass('rotate');
-        if(!jQuery(this).hasClass('rotate')) {
-            jQuery(this).addClass('rotate');
-        }
-    })
+    //Masonry
 
     var jQuerygrid = jQuery('.masonary').masonry({
         itemSelector: '.item',

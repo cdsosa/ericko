@@ -1,22 +1,27 @@
 //Portfolio
 .portfolio-mod {
   h5{
-    margin-bottom: 20px;
+//    margin-bottom: 20px;
   }
   .object {
-    width: 33%;
+    width: 32%;
     height: 250px;
     display: block;
     float: left;
     display: inline-block;
     overflow: hidden;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    &:nth-of-type(3n+3){
+      margin-right: 0;
+    }
     @media(max-width: @tablet) {
       width: 100%;
       margin-bottom: 30px;
     }
     .overlay{
       position: absolute;
-      background-color: rgba(15, 189, 160, .9);
+      background-color: rgba(0, 0, 0, .8);
       height: 100%;
       width: 101%;
       opacity: 0;

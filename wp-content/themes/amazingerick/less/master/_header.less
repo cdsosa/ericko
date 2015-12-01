@@ -1,23 +1,22 @@
 header{
   width: 100%;
   clear: both;
-  position: relative;
   height: 70px;
-  background: rgba(250,250,250,1);
-  border-bottom: 2px solid @secondaryColor;
+  background: @primaryColor;
   .user-select (none);
   @media screen and (max-width: @grid) {
-    border-bottom: 1px solid @secondaryColor;
     height: 50px;
   }
-  &.home{
-    background: rgba(0,0,0,.7);
-    position: absolute;
+  .grid{
+    overflow: initial;
+    @media screen and (max-width: @grid) {
+      position: static;
+    }
   }
   .logo{
     position: relative;
-    margin-top: 4px;
-    height: 60px;
+    margin-top: 9px;
+    height: 50px;
     display: inline-block;
     float: left;
 
@@ -42,36 +41,69 @@ header{
     float: left;
     top: 22px;
     left: 20px;
-    color:@primaryColor;
+    color: #ffffff;
     @media screen and (max-width: @grid) {
       top: 15px;
       left: 18px;
     }
   }
   .mainMenu{
-    right: 0;
-    position: absolute;
-    top: 20px;
-    li{
-      display: inline-block;
-      text-align: left;
-      text-transform: capitalize;
-      font-weight: 500;
-      padding:5px;
-      margin-left: 5px;
-      font-size: 11pt;
-      .box-sizing (box-sizing);
-      a{
-        color: @primaryColor;
-        .transition(color, .5s);
-        &:hover{
-          color:@darkPrimary;
+    li a {
+      text-transform: uppercase;
+      font-family: @primaryFont;
+    }
+    @media screen and (min-width: @grid) {
+      right: 0;
+      position: absolute;
+      top: 20px;
+      display: block !important;
+      li{
+        display: inline-block;
+        text-align: left;
+        font-weight: 500;
+        padding:5px;
+        margin-left: 15px;
+        font-size: 11pt;
+        .box-sizing (box-sizing);
+        a{
+          color: @altGrey;
           .transition(color, .5s);
+          &:hover{
+            color: @altLightGrey;
+            .transition(color, .5s);
+          }
         }
       }
     }
     @media screen and (max-width: @grid) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 100;
+      top: 50px;
+      background-color: rgba(0,0,0,.8);
+      left:0;
       display: none;
+      padding-top: 80px;
+      .transition(padding-top @duration);
+      li {
+        padding: 10px 20px;
+        font-size: 14pt;
+        list-style: none;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        font-family: @primaryFont;
+        font-weight: 500;
+        text-align: center;
+        a {
+          color: @secondaryColor;
+        }
+      }
+      &.gloss{
+        padding-top: 30px;
+        .transition(padding-top @duration);
+      }
     }
   }
 }
@@ -80,40 +112,20 @@ header{
   float:right;
   display:none;
   cursor: pointer;
+  margin-right: 20px;
   @media screen and (max-width: @grid){
     display:block;
   }
   .fa{
     padding:45px 20px;
-    color: @primaryColor;
+    color: #ffffff;
     box-sizing: border-box;
     @media screen and (max-width: @grid) {
       padding:14px 18px;
       font-size: 16pt;
     }
-
   }
-}
-
-nav.mobileNav {
-  width: 320px;
-  position: absolute;
-  z-index: 20;
-  top: 50px;
-  background-color: @primaryColor;
-  display: none;
-  right:0;
-  box-shawdow: 5px 10px 5px #000;
-  li {
-    padding: 10px 20px;
-    font-size: 14pt;
-    list-style: none;
-    text-transform: uppercase;
-    box-sizing: border-box;
-    font-family: @primaryFont;
-    font-weight: 500;
-    a {
-      color: @secondaryColor;
-    }
+  &.active .fa:before {
+    content: '\f057';
   }
 }

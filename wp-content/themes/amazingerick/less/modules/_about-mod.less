@@ -1,0 +1,40 @@
+.slideImage.about-mod {
+  .profile-pic img{
+    width: 95px;
+    height: 95px;
+    .border-radius(50%);
+  }
+  &:after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.75);
+    z-index: 1;
+    position: absolute;
+  }
+  .tagline {
+    position: relative;
+    z-index: 3;
+    h1{
+      padding-top: 10px;
+    }
+    em{
+      padding-top: 10px;
+      color: #ffffff;
+      font-size: 1.3em;
+      font-weight: 300;
+      line-height: 1.2em;
+    }
+    .social-icons {
+      padding-top: 26px;
+      .fa{
+        color: #ffffff;
+        display: inline-block;
+        margin: 0 5px;
+        font-size: 1.2em;
+      }
+    }
+  }
+}

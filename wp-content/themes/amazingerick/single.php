@@ -6,62 +6,67 @@ Template Name: Client-Wars
 
 get_header(); ?>
     <?php $image = get_field('hero_image'); ?>
-    <section class="slideImage small-med" style="background-image: url('<?php echo $image ?>')">
 
-    </section>
+    <div class="background-single">
 
-    <section>
-        <div class="grid gridObjects single">
+        <section class="slideImage small-med" style="background-image: url('<?php echo $image ?>')">
 
-            <h1><?php the_title(); ?></h1>
-            <h6 class="date"><?php echo get_the_date(); ?></h6>
+        </section>
 
-            <div class="wix">
+        <section class="special-overlay">
+            <div class="grid gridObjects single-content">
+
+                <h1><?php the_title(); ?></h1>
+                <h6 class="date"><?php echo get_the_date(); ?></h6>
+
+                <div class="wix">
+                    <?php
+                    while ( have_posts() ) : the_post();
+
+                        the_content();
+
+                    endwhile;
+                    ?>
+                </div>
+
                 <?php
-                while ( have_posts() ) : the_post();
 
-                    the_content();
+                $widget = get_field('html_widget');
 
-                endwhile;
+                if ($widget) {
+
+
+                    if (in_array('score_block', $widget)) {
+
+                        get_template_part('posts_parts/score_block');
+
+                    }
+
+                    if (in_array('timer', $widget)) {
+
+                        get_template_part('posts_parts/gumdrops');
+
+                    }
+
+                }
+
+
                 ?>
+
+
+
+                <?php
+
+                if (get_field('facebook_comments')) {
+
+                    get_template_part('posts_parts/facebook_comments');
+
+                } ?>
+
             </div>
 
-            <?php
+        </section>
 
-            $widget = get_field('html_widget');
-
-            if ($widget) {
-
-
-                if (in_array('score_block', $widget)) {
-
-                    get_template_part('posts_parts/score_block');
-
-                }
-
-                if (in_array('timer', $widget)) {
-
-                    get_template_part('posts_parts/gumdrops');
-
-                }
-
-            }
-
-
-            ?>
-
-
-
-            <?php
-
-            if (get_field('facebook_comments')) {
-
-                get_template_part('posts_parts/facebook_comments');
-
-            } ?>
-
-        </div>
-
-    </section>
+    </div>
 
 <?php get_footer(); ?>

@@ -43,7 +43,7 @@ $tw_s = get_field('twitter_consumer_secret' , 'option');
             echo "<div class='object twitter-post'>"; ?>
 
             <a href="https://twitter.com/EricksEmpire" class="head" target="_blank">
-                <img src="<?php echo $items['user']['profile_image_url'] ?>" />
+<!--                <img src="--><?php //echo $items['user']['profile_image_url'] ?><!--" />-->
                 <h5>@<?php echo $items['user']['screen_name'] ?></h5>
             </a>
 

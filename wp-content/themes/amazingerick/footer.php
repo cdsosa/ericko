@@ -1,7 +1,7 @@
 <footer>
     <section class="contact-mod">
         <div class="contact-info">
-            <h5 class="center">Let's work together</h5>
+            <h4 class="center">Let's work together</h4>
             <p>I'm currently taking on select development and design projects.</p>
         </div>
         <?php the_field('contact_form', 'option'); ?>
@@ -12,24 +12,19 @@
         <p class="footer-line">&copy; 2015 Erick Olivares&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provo, Utah</p>
 
         <div class="social-icons">
-            <a href="https://www.behance.net/erickolivares" target="_blank">
-                <i class="fa fa-behance fa-lg"></i>
-            </a>
-            <a href="https://github.com/erickolivares" target="_blank">
-                <i class="fa fa-github fa-lg"></i>
-            </a>
-            <a href="https://twitter.com/EricksEmpire" target="_blank">
-                <i class="fa fa-twitter fa-lg"></i>
-            </a>
-            <a href="http://instagram.com/erickolvrs" target="_blank">
-                <i class="fa fa-instagram fa-lg"></i>
-            </a>
-            <a href="https://www.linkedin.com/profile/view?id=113044967&trk=nav_responsive_tab_profile" target="_blank">
-                <i class="fa fa-linkedin fa-lg"></i>
-            </a>
-            <a href="mailto:erickolivares21@gmail.com?subject=ErickOlivares.com">
-                <i class="fa fa-envelope fa-lg"></i>
-            </a>
+            <?php if( have_rows('social_media', 'option') ): ?>
+                <?php while( have_rows('social_media', 'option') ): the_row();
+
+                    $sm_site= get_sub_field('social_media_site');
+                    $sm_url = get_sub_field('social_media_url');
+
+                    ?>
+                    <a href="<?php echo $sm_url ?>" target="_blank">
+                        <i class="fa <?php echo $sm_site ?>"></i>
+                    </a>
+
+                <?php endwhile; ?>
+            <?php endif; ?>
         </div>
 
     </div>

@@ -53,19 +53,32 @@
 
 </head>
 
-<body <?php if ( !is_user_logged_in() ) { ?> <?php }?>>
+<body <?php body_class( $class ); ?> >
 
-<nav class="mobileNav">
-    <?php
-        wp_nav_menu(array(
-            'theme_location' => 'main_menu',
-            'container_class' => 'mainMenu',
-            'menu_class' => 'menu',
-            'before' => '<div class="selected btn">',
-            'after' => '<span class="icon-angle-right"></span></div>',
-            'items_wrap' => '<ul id="%1$s" class="">%3$s</ul>'
-        ));
-    ?>
+<?php
+
+//Current User EMail
+global $current_user;
+get_currentuserinfo();
+$email = $current_user->user_email;
+$grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+?>
+
+<nav class="admin-nav">
+    <a href="/wp-admin/profile.php">
+        <li style="background-image: url('<?php echo $grav_url?>')">
+        </li>
+    </a>
+    <a href="/wp-admin/">
+        <li>
+            <i class="fa fa-home"></i>
+        </li>
+    </a>
+    <a href="/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">
+        <li>
+            <i class="fa fa-pencil"></i>
+        </li>
+    </a>
 </nav>
 
 <header>
