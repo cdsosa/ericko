@@ -47,39 +47,12 @@
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
     <?php
-        //Conflict with Contact Form 7
-        //do_action('wp_head');
+        do_action('wp_head');
     ?>
 
 </head>
 
 <body <?php body_class( $class ); ?> >
-
-<?php
-
-//Current User EMail
-global $current_user;
-get_currentuserinfo();
-$email = $current_user->user_email;
-$grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
-?>
-
-<nav class="admin-nav">
-    <a href="/wp-admin/profile.php">
-        <li style="background-image: url('<?php echo $grav_url?>')">
-        </li>
-    </a>
-    <a href="/wp-admin/">
-        <li>
-            <i class="fa fa-home"></i>
-        </li>
-    </a>
-    <a href="/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit">
-        <li>
-            <i class="fa fa-pencil"></i>
-        </li>
-    </a>
-</nav>
 
 <header>
 

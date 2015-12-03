@@ -16,6 +16,7 @@ get_header(); ?>
             'posts_per_page' => 1,
             'category__not_in'=> 4,
             'order'   => 'DSC',
+            'post_status' => 'publish'
         )
     );
     if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post();?>
@@ -58,6 +59,7 @@ wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the pa
                     'offset' => 1,
                     'posts_per_page' => 1,
                     'category__not_in'=> 4,
+                    'post_status' => 'publish'
                 )
             );
             if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post();?>
@@ -94,6 +96,7 @@ wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the pa
                         'order'   => 'DSC', 'offset' =>2,
                         'posts_per_page' => 6,
                         'category__not_in'=> 4,
+                        'post_status' => 'publish'
                     )
                 );
                     if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post();?>
