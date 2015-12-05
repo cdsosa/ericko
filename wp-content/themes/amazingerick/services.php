@@ -38,6 +38,18 @@ get_header(); ?>
     ?>
 
 
-<?php //get_template_part( 'quotes'); ?>
+<section class="testimonials" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2015/12/bluezone-bg.png')">
+    <div class="grid gridObjects">
+        <table>
+            <td>
+                <div class="quoter" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2015/04/bluezone1.png')"></div>
+                <div class="quote">
+                    <h4>"We love Erick’s work, he is creative, responsive and understands marketing online.  Without hesitation we recommend Erick!!"</h4>
+                    <h6>- Aaron Stewart, <em>BlueZone Labs</em></h6>
+                </div>
+            </td>
+        </table>
+    </div>
+</section>
 
 <?php get_footer(); ?>

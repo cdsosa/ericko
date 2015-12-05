@@ -8,7 +8,7 @@ get_header(); ?>
 
 <section>
 
-    <div class="grid gridObjects bucket">
+    <div class="grid gridObjects bucket clients">
 
         <h1>Clients</h1>
 
@@ -20,9 +20,13 @@ get_header(); ?>
             <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
             <?php setup_postdata($post); ?>
 
-            <div class="object boxed">
+            <div class="object boxed" style="background-image: url('<?php echo get_field('thumbnail_image')['url']?>')">
                 <img src="<?php the_field('logo'); ?>" />
-
+                <?php if (get_field('url')) { ?>
+                    <a href="<?php the_field('url'); ?>" target="_blank">
+                        <i class="fa fa-external-link"></i>
+                    </a>
+                <?php } ?>
             </div>
 
             <?php endforeach; ?>
@@ -32,6 +36,21 @@ get_header(); ?>
 
     </div>
 
+</section>
+
+<section class="testimonials" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2015/12/ace-build-bg.png')">
+    <div class="grid gridObjects">
+        <table>
+            <td>
+                <div class="quoter" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2015/04/acebuildingmaterials.png')">
+                </div>
+                <div class="quote">
+                    <h4>"Erick has been a valuable asset to building our corporate collateral.  His friendly service combined with his quality of work has benefited our organization."</h4>
+                    <h6>- Jessica Zakarya, <em>Ace Building Materials</em></h6>
+                </div>
+            </td>
+        </table>
+    </div>
 </section>
 
 
