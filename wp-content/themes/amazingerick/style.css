@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 /*
 Theme Name: AmazingErick
 Author: Erick Olivares
@@ -322,6 +320,9 @@ section {
   z-index: 1;
   position: relative;
   background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 button {
   -webkit-border-radius: 5px;
@@ -424,12 +425,12 @@ button.reversed:hover a {
   }
 }
 ::-moz-selection {
-  color: #ffffff;
-  background: #1e1e1e;
+  color: #000000;
+  background: #f3f315;
 }
 ::selection {
-  color: #ffffff;
-  background: #1e1e1e;
+  color: #000000;
+  background: #f3f315;
 }
 .primary {
   color: #000000;
@@ -862,6 +863,8 @@ footer .social-icons .fa:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .bucket .object:nth-of-type(3n+3) {
   margin-right: 0;
@@ -953,6 +956,47 @@ footer .social-icons .fa:hover {
   left: 0;
   bottom: 0;
 }
+.clients .boxed img {
+  position: relative;
+  -webkit-transition: all, 200ms;
+  -moz-transition: all, 200ms;
+  -ms-transition: all, 200ms;
+  -o-transition: all, 200ms;
+  transition: all, 200ms;
+}
+.clients .boxed .fa-external-link {
+  color: #ffffff;
+  -webkit-transition: all, 200ms;
+  -moz-transition: all, 200ms;
+  -ms-transition: all, 200ms;
+  -o-transition: all, 200ms;
+  transition: all, 200ms;
+  position: absolute;
+  left: 10px;
+  bottom: 7px;
+  opacity: 0;
+  padding: 8px;
+}
+.clients .boxed:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.24);
+  z-index: 0;
+}
+.clients .boxed:hover .fa-external-link {
+  opacity: 1;
+  cursor: pointer;
+  z-index: 6;
+  -webkit-transition: all, 200ms;
+  -moz-transition: all, 200ms;
+  -ms-transition: all, 200ms;
+  -o-transition: all, 200ms;
+  transition: all, 200ms;
+}
 div.content {
   float: left;
   width: 738px;
@@ -1003,7 +1047,7 @@ div.content.single-client.portfolio-mod .object {
   width: 50%;
 }
 .contact-mod {
-  padding: 40px 0;
+  padding: 80px 0 40px;
   background-color: #f0f0f0;
 }
 @media screen and (max-width: 768px) {
@@ -2110,6 +2154,50 @@ textarea {
   bottom: 0;
   width: auto;
   padding: 8px;
+}
+section.testimonials {
+  padding: 50px 10%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+section.testimonials table {
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  section.testimonials table .quoter {
+    display: inline-block;
+    float: left;
+  }
+}
+section.testimonials table .quoter {
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 4px solid #ffffff;
+}
+@media screen and (max-width: 768px) {
+  section.testimonials table .quoter {
+    margin-bottom: 30px;
+  }
+}
+section.testimonials table .quote {
+  padding-left: 260px;
+}
+section.testimonials table .quote h4,
+section.testimonials table .quote h6 {
+  color: #ffffff;
+  text-transform: none;
+}
+section.testimonials table .quote h6 {
+  font-size: 1em;
+  margin-top: 8px;
+}
+section.testimonials table .quote em {
+  display: inline-block;
 }
 .wysiwyg ol,
 .wysiwyg ul {

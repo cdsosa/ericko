@@ -1,0 +1,35 @@
+.clients {
+  .boxed{
+    img {
+      position: relative;
+      .transition(all, @duration);
+    }
+    .fa-external-link {
+      color: #ffffff;
+      .transition(all, @duration);
+      position: absolute;
+      left: 10px;
+      bottom:7px;
+      opacity:0;
+      padding: 8px;
+    }
+    &:before {
+      content:'';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.24);
+      z-index: 0;
+    }
+    &:hover{
+      .fa-external-link {
+        opacity:1;
+        cursor: pointer;
+        z-index: 6;
+        .transition(all, @duration);
+      }
+    }
+  }
+}
