@@ -14,9 +14,15 @@ get_header();
                     <td>
                         <h1>Tired of Wordpress' default toolbar? </h1>
                         <h5>Simple Toolbar is your answer for a simple and modern approach.</h5>
-                        <button>Download Now</button>
                     </td>
                 </table>
+            </section>
+
+            <section class="signup">
+                <label>
+                    <h2>Become a Beta Tester!</h2>
+                    <?php echo do_shortcode( '[contact-form-7 id="590" title="Simple Toolbar Beta"]' ); ?>
+                </label>
             </section>
 
         </div>

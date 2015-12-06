@@ -1574,7 +1574,8 @@ textarea {
 .landing-page h4,
 .landing-page h5,
 .landing-page h6,
-.landing-page button {
+.landing-page button,
+.landing-page p {
   font-family: 'Roboto', sans-serif;
 }
 .landing-page .slideImage:after {
@@ -1609,15 +1610,32 @@ textarea {
   margin-top: 20px;
   text-transform: none;
 }
-.landing-page .slideImage table td button {
-  color: #e5e212;
-  border: transparent;
-  margin-top: 30px;
-  font-weight: 600;
-}
-.landing-page .description {
+.landing-page .signup {
   padding: 100px 0 ;
   text-align: center;
+}
+.landing-page .signup label {
+  display: block;
+}
+.landing-page .signup label .wpcf7 {
+  position: relative;
+  margin-top: 20px;
+}
+.landing-page .signup label .wpcf7 input {
+  outline: none;
+  border: transparent;
+  font-weight: 600;
+  background: rgba(206, 206, 201, 0.4);
+  padding: 7px 12px;
+  color: #ffffff;
+  width: 260px;
+}
+.landing-page .signup label .wpcf7 button {
+  margin-top: 10px;
+  font-size: .8em;
+}
+.landing-page .signup label .wpcf7 .alert {
+  background-color: #e5e212;
 }
 .masonary {
   width: 100%;

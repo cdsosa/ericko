@@ -9,7 +9,8 @@
   h4,
   h5,
   h6,
-  button {
+  button,
+  p {
     font-family:@lb-font;
   }
   .slideImage{
@@ -43,17 +44,34 @@
           margin-top: 20px;
           text-transform: none;
         }
-        button {
-          color: #e5e212;
-          border: transparent;
-          margin-top: 30px;
-          font-weight: 600;
-        }
       }
     }
   }
-  .description {
+  .signup {
     padding: 100px 0 ;
     text-align: center;
+    label {
+      display: block;
+      .wpcf7{
+        position: relative;
+        margin-top: 20px;
+        input {
+          outline: none;
+          border: transparent;
+          font-weight: 600;
+          background: rgba(206, 206, 201, 0.4);
+          padding: 7px 12px;
+          color: #ffffff;
+          width: 260px;
+        }
+        button {
+          margin-top: 10px;
+          font-size: .8em;
+        }
+        .alert {
+          background-color: #e5e212;
+        }
+      }
+    }
   }
 }
