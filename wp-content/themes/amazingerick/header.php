@@ -53,6 +53,20 @@
 
 <body <?php body_class( $class ); ?> >
 
+<div class="grid nav-att">
+    <?php
+    wp_nav_menu(array(
+        'theme_location' => 'main_menu',
+        'container_class' => 'mainMenu',
+        'menu_class' => 'menu',
+        'before' => '<div class="selected btn">',
+        'after' => '<span class="icon-angle-right"></span></div>',
+        'items_wrap' => '<ul id="%1$s" class="">%3$s</ul>'
+    ));
+    ?>
+</div>
+
+
 <header>
 
     <div class="grid">
@@ -61,17 +75,6 @@
             <img class="logo" src="<?php the_field('logo','option'); ?>">
             <p class="slogan">run. travel. code.</p>
         </a>
-
-        <?php
-            wp_nav_menu(array(
-                'theme_location' => 'main_menu',
-                'container_class' => 'mainMenu',
-                'menu_class' => 'menu',
-                'before' => '<div class="selected btn">',
-                'after' => '<span class="icon-angle-right"></span></div>',
-                'items_wrap' => '<ul id="%1$s" class="">%3$s</ul>'
-            ));
-         ?>
 
         <div class="mobileToggle">
             <i class="fa fa-bars fa-2x"></i>

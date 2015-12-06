@@ -38,7 +38,7 @@ get_header(); ?>
     ?>
 
 
-<section class="testimonials" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2015/12/bluezone-bg.png')">
+<section id="bluezone-labs" class="testimonials" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2015/12/bluezone-bg.png')">
     <div class="grid gridObjects">
         <table>
             <td>
