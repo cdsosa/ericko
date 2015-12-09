@@ -19,7 +19,7 @@
                     $sm_url = get_sub_field('social_media_url');
 
                     ?>
-                    <a href="<?php echo $sm_url ?>" target="_blank">
+                    <a href="<?php echo $sm_url ?>" target="_blank" rel="nofollow">
                         <i class="fa <?php echo $sm_site ?>"></i>
                     </a>
 

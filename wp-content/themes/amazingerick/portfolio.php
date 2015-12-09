@@ -19,7 +19,7 @@ get_header(); ?>
             <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
                 <?php setup_postdata($post); ?>
 
-                <a href="<?php the_permalink(); ?>" class="object slideImage" style="background-image: url('<?php the_field('logo'); ?>')">
+                <a href="<?php the_permalink(); ?>" class="object slideImage" style="background-image: url('<?php the_field('logo'); ?>')" rel="nofollow">
                     <div class="overlay slideImage">
                         <h5 class="tagline"><?php the_title();?></h5>
                     </div>

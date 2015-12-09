@@ -31,7 +31,7 @@ get_header(); ?>
 
                             <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
                                 <?php setup_postdata($post); ?>
-                                    <a class="link" href="<?php the_field('url') ?>" target="_blank">
+                                    <a class="link" href="<?php the_field('url') ?>" target="_blank" rel="nofollow">
                                         <img src="<?php the_field('logo') ?>" />
                                         <div class="overlay">
                                         </div>
@@ -54,7 +54,7 @@ get_header(); ?>
 
                         <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
                             <?php setup_postdata($post); ?>
-                            <a href="<?php the_permalink() ?>">
+                            <a href="<?php the_permalink() ?>" rel="nofollow">
                                 <i class="fa fa-link"></i>
                                 <p><?php the_title(); ?></p>
                             </a>
@@ -82,7 +82,7 @@ get_header(); ?>
 
                 <div class="content">
                     <?php if (get_field('url')) {?>
-                        <a href="<?php the_field('url')?>" target="_blank">
+                        <a href="<?php the_field('url')?>" target="_blank" rel="nofollow">
                             <button>Visit Website</button>
                         </a>
                     <?php } ?>

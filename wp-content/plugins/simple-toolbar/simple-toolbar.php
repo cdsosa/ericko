@@ -27,23 +27,23 @@ if ( is_user_logged_in() ) {
     ?>
 
     <nav class="admin-nav">
-        <a href="/wp-admin/profile.php" target="_blank">
+        <a href="<?php echo site_url(); ?>/wp-admin/profile.php" target="_blank">
             <li style="background-image: url('<?php echo $grav_url ?>')">
             </li>
         </a>
-        <a href="/wp-admin/" target="_blank">
+        <a href="<?php echo site_url(); ?>/wp-admin/" target="_blank">
             <li>
                 <i class="fa fa-home"></i>
                 <nobr>Admin Dashboard</nobr>
             </li>
         </a>
-        <a href="/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit" target="_blank">
+        <a href="<?php echo site_url(); ?>/wp-admin/post.php?post=<?php the_ID(); ?>&action=edit" target="_blank">
             <li>
                 <i class="fa fa-pencil"></i>
                 <nobr>Edit Page</nobr>
             </li>
         </a>
-        <a href="/wp-admin/post-new.php" target="_blank">
+        <a href="<?php echo site_url(); ?>/wp-admin/post-new.php" target="_blank">
             <li>
                 <i class="fa fa-plus"></i>
                 <nobr>New Post</nobr>

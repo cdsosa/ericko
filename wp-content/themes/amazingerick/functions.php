@@ -122,7 +122,7 @@ function setup_portfolio () {
 
     $portfolioLabels = array(
         'name'                => __( 'Portfolio', 'AmazingErick' ),
-        'singular_name'       => __( 'portfolio Piece', 'AmazingErick' )
+        'singular_name'       => __( 'Portfolio Piece', 'AmazingErick' )
     );
 
     $portfolioOptions = array(

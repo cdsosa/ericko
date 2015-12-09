@@ -23,7 +23,7 @@ get_header(); ?>
             <div class="object boxed" style="background-image: url('<?php echo get_field('thumbnail_image')['url']?>')">
                 <img src="<?php the_field('logo'); ?>" />
                 <?php if (get_field('url')) { ?>
-                    <a href="<?php the_field('url'); ?>" target="_blank">
+                    <a href="<?php the_field('url'); ?>" target="_blank" rel="nofollow">
                         <i class="fa fa-external-link"></i>
                     </a>
                 <?php } ?>

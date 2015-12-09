@@ -55,7 +55,7 @@ $tw_s = get_field('twitter_consumer_secret' , 'option');
         }
 
         ?>
-        <a href="https://twitter.com/EricksEmpire" target="_blank">
+        <a href="https://twitter.com/EricksEmpire" target="_blank" rel="nofollow">
             <button class="reversed">Follow me on Twitter<i class="fa fa-twitter fa-lg"></i> </button>
         </a>
 
