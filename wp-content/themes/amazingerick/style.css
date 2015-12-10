@@ -315,6 +315,9 @@ div[class^="col"]:last-of-type {
 body {
   padding-bottom: 540px;
   background-color: #ffffff;
+  -webkit-box-shadow: 4px 4px 4px 4px #000000;
+  -moz-box-shadow: 4px 4px 4px 4px #000000;
+  box-shadow: 4px 4px 4px 4px #000000;
 }
 section {
   width: 100%;
@@ -670,6 +673,10 @@ footer .grid {
 footer p.footer-line {
   color: #ffffff;
   font-size: .7em;
+}
+footer p.footer-line a {
+  color: #ffffff;
+  display: inline-block;
 }
 @media screen and (max-width: 1024px) {
   footer p.footer-line {
@@ -1901,6 +1908,7 @@ textarea {
 .gridObjects aside .text p {
   color: #ffffff;
   margin-bottom: 25px;
+  word-wrap: break-word;
 }
 .gridObjects aside .text a p,
 .gridObjects aside .text a .fa {

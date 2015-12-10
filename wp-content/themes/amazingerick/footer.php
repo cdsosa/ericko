@@ -9,7 +9,7 @@
 
     <div class="grid">
 
-        <p class="footer-line">&copy; 2015 Erick Olivares&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provo, Utah</p>
+        <p class="footer-line">&copy; 2015 Erick Olivares&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provo, Utah&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/erickolivares/ericko/issues" rel="nofolow" target="_blank"><em>Report Bugs</em></a></p>
 
         <div class="social-icons">
             <?php if( have_rows('social_media', 'option') ): ?>
