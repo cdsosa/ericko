@@ -2,30 +2,34 @@
 get_header();
 
     $image = get_field('hero_image');
-    $get_landing_page = in_array('landing_page', get_field('html_widget'));
 
-    if ($get_landing_page) { ?>
+    $widget = get_field('html_widget');
+    if ($widget) {
+
+        if (in_array('landing_page', get_field('html_widget'))) { ?>
 
 
-        <div class="background-single landing-page">
+            <div class="background-single landing-page">
 
-            <section class="slideImage small-med" style="background-image: url('<?php echo $image ?>')">
-                <table>
-                    <td>
-                        <h1>Tired of Wordpress' default toolbar? </h1>
-                        <h5>Simple Toolbar is your answer for a simple and modern approach.</h5>
-                    </td>
-                </table>
-            </section>
+                <section class="slideImage small-med" style="background-image: url('<?php echo $image ?>')">
+                    <table>
+                        <td>
+                            <h1>Tired of Wordpress' default toolbar? </h1>
+                            <h5>Simple Toolbar is your answer for a simple and modern approach.</h5>
+                        </td>
+                    </table>
+                </section>
 
-            <section class="signup">
-                <label>
-                    <h2>Become a Beta Tester!</h2>
-                    <?php echo do_shortcode( '[contact-form-7 id="590" title="Simple Toolbar Beta"]' ); ?>
-                </label>
-            </section>
+                <section class="signup">
+                    <label>
+                        <h2>Become a Beta Tester!</h2>
+                        <?php echo do_shortcode( '[contact-form-7 id="590" title="Simple Toolbar Beta"]' ); ?>
+                    </label>
+                </section>
 
-        </div>
+            </div>
+
+        <?php } ?>
 
     <?php } else { ?>
 
@@ -52,8 +56,6 @@ get_header();
                     </div>
 
                     <?php
-
-                    $widget = get_field('html_widget');
 
                     if ($widget) {
 
