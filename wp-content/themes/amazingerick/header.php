@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Erick Olivares</title>
+	<title><?php wp_title(''); ?></title>
     <!-- Facebook -->
     <?php if (get_permalink()) { ?>
         <meta property="og:url" content="<?php the_permalink(); ?>" />
