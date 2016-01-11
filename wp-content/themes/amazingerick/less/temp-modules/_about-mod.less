@@ -34,6 +34,11 @@
         display: inline-block;
         margin: 0 5px;
         font-size: 1.2em;
+        .transition(all, @duration);
+        &:hover{
+          color: @primaryColor;
+          .transition(all, @duration);
+        }
       }
     }
   }

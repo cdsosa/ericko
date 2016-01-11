@@ -16,13 +16,12 @@
     display: block;
     float: left;
     .transition(all .4s);
-
     @media screen and (max-width: @tablet) {
       width: 100%;
     }
 
     .post {
-      background-color: @carbon;
+      .gradient (@primaryColor,darken(@primaryColor, 10%));
       padding: 20px;
       h5{
         color: @background;

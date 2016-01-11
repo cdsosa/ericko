@@ -4,7 +4,7 @@
   border-radius: 10px;
   overflow: hidden;
   display: inline-block;
-  background-color: @primaryColor;
+  .gradient (@primaryColor,darken(@primaryColor, 5%));
   text-align: left;
   color: #fff;
   .box-sizing(border-box);
@@ -80,9 +80,11 @@
     padding: 0 15px;
     margin-top: 20px;
     h6{
-      color: #acacac;
+      color: #ffffff;
       font-weight: 500;
       margin-bottom: 5px;
+      border-bottom: 2px solid lighten(@primaryColor, 10%);
+      padding-bottom: 4px;
     }
     p{
       color: @background;
