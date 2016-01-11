@@ -6,7 +6,7 @@ Template Name: About
 
 get_header(); ?>
 
-<section class="slideImage small-med about-mod" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/backgrounds/shanghai2.jpg')">
+<section class="slideImage small-med about-mod parallax" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/backgrounds/shanghai2.jpg')">
 
     <!--    <video autoplay="false" loop="loop"><source src="--><?php //echo get_template_directory_uri(); ?><!--/video/movie.mp4" type="video/mp4"></source></video>-->
     <div class="tagline">

@@ -4,10 +4,12 @@
 }
 
 body {
-  padding-bottom: 540px;
+  padding-top: 70px;
   background-color: #ffffff;
   .box-shadow(4px 4px 4px 4px #000000);
-
+  @media screen and (max-width: @grid) {
+    padding-top: 50px;
+  }
 }
 
 section{
@@ -68,6 +70,16 @@ button {
   }
 }
 
+.wrapper {
+  width:@grid;
+  margin: 0 auto;
+  @media screen and (max-width: @grid) {
+    width: 90%;
+    padding: 0 5%;
+    .box-sizing(border-box);
+  }
+}
+
 .grid {
   width:@grid;
   margin: 0 auto;
@@ -84,13 +96,13 @@ button {
 }
 
 ::-moz-selection {
-  color: #000000;
-  background: @neon;
+  color: #ffffff;
+  background: @primaryColor;
 }
 
 ::selection {
-  color: #000000;
-  background: @neon;
+  color: #ffffff;
+  background: @primaryColor;
 }
 
 .primary {
@@ -124,5 +136,12 @@ button {
 .hide-tablet {
   @media screen and (max-width: @tablet){
     display: none !important;
+  }
+}
+
+.full-width {
+  .gradient (@primaryColor,darken(@primaryColor, 5%));
+  h2{
+    color: #ffffff;
   }
 }

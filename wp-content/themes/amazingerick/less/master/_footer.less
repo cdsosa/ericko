@@ -1,14 +1,12 @@
 footer{
   box-sizing:border-box;
   color:@background;
-  background-color: darken(@primaryColor, 5%);
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: relative;
+  .gradient (@primaryColor,darken(@primaryColor, 5%));
   width: 100%;
   .grid{
     padding: 20px 5% 20px 5%;
-    .box-sizing(border-box)
+    .box-sizing(border-box);
   }
   p.footer-line{
     color:@background;

@@ -1,0 +1,50 @@
+.service-list {
+  overflow: hidden;
+  .gradient (@primaryColor,darken(@primaryColor, 10%));
+  padding: 60px 0;
+  h2{
+    text-align: center;
+    color:#ffffff;
+    padding-bottom: 25px;
+  }
+  .col-25 {
+    .box-sizing(border-box);
+    padding:0 20px;
+    background-color: #ffffff;
+    padding-top: 16px;
+    @media screen and (min-width: @grid) {
+      width: 23.5%;
+      margin-left: 2%;
+      min-height: 270px;
+      &:first-of-type {
+        margin-left: 0%;
+      }
+    }
+    @media screen and (max-width: @grid) {
+      width: 48%;
+      min-height: 250px;
+      margin-left: 2%;
+      margin-bottom: 30px;
+      &:nth-of-type(odd) {
+        margin-left: 0;
+      }
+    }
+    @media screen and (max-width: @tablet) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  h4{
+    text-align: center;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    color: @primaryColor;
+  }
+  ul{
+    list-style-type: none;
+    text-align: center;
+    li{
+      line-height: 1.8em;
+    }
+  }
+}

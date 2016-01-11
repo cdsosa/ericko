@@ -4,8 +4,8 @@ $tw_ats = get_field('twitter_access_token_secret', 'option');
 $tw_ck = get_field('twitter_consumer_key' , 'option');
 $tw_s = get_field('twitter_consumer_secret' , 'option');
 ?>
-<section class="full-width">
-    <div class="grid gridObjects bucket">
+<section class="twitter">
+    <div class="wrapper">
 
         <h2>Twitter Feed</h2>
 
@@ -40,16 +40,15 @@ $tw_s = get_field('twitter_consumer_secret' , 'option');
             $datetime->setTimezone(new DateTimeZone('America/Denver'));
 
 
-            echo "<div class='object twitter-post'>"; ?>
+            echo "<div class='col-33'>"; ?>
 
-            <a href="https://twitter.com/EricksEmpire" class="head" target="_blank">
-<!--                <img src="--><?php //echo $items['user']['profile_image_url'] ?><!--" />-->
-                <h5>@<?php echo $items['user']['screen_name'] ?></h5>
-            </a>
-
-            <small><?php echo $datetime->format('M dS Y - g:ia'); ?></small>
+<!--            <a href="https://twitter.com/EricksEmpire" class="head" target="_blank">
+                <img src="<?php /*echo $items['user']['profile_image_url'] */?>" />
+                <h5>@<?php /*echo $items['user']['screen_name'] */?></h5>
+            </a>-->
 
             <p><?php echo $items['text'] ?></p>
+            <small><?php echo $datetime->format('M dS Y - g:ia'); ?></small>
 
             <?php echo "</div>";
         }

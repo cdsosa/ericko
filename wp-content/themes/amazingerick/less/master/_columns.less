@@ -8,6 +8,9 @@
 
 .col-50 {
   width: 50%;
+  @media screen and (max-width: @break) {
+    width: 100%;
+  }
 }
 
 .col-75 {
@@ -17,15 +20,4 @@
 div[class^="col"] {
   float: left;
   display: inline-block;
-  padding: 0 5%;
-  .box-sizing(border-box);
-  &:first-of-type{
-    padding-left: 0;
-  }
-  &:last-of-type{
-    padding-right: 0;
-  }
-  @media (max-width: @tablet) {
-    width: 100%;
-  }
 }

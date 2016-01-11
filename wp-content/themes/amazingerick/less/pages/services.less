@@ -15,6 +15,10 @@
         border-bottom: 2px solid @primaryColor;
       }
     }
+    ul li {
+      color: #ffffff;
+      background-color: @primaryColor;
+    }
   }
   &.odd{
     .gradient (@primaryColor,darken(@primaryColor, 10%));
@@ -23,6 +27,10 @@
       &:after {
         border-bottom: 2px solid #ffffff;
       }
+    }
+    ul li {
+      background-color: #ffffff;
+      color: @primaryColor;
     }
     p{
       color: #ffffff;
@@ -35,6 +43,8 @@
     img{
       max-width: 100%;
       max-height: 300px;
+      margin: 0 auto;
+      display: block;
     }
     h4 {
       padding-bottom: px;
@@ -45,6 +55,17 @@
         width: 200px;
         margin-bottom: 20px;
         .transition(all, @duration-long);
+      }
+    }
+    ul {
+      padding-top: 15px;
+      li {
+        font-size: .8em;
+        display: inline-block;
+        padding: 5px 8px;
+        margin-right: 4px;
+        .box-sizing(border-box);
+        margin-bottom: 10px;
       }
     }
     p{

@@ -10,7 +10,7 @@ Author URI: http://www.erick-olivares.com
 
 function wpa85495_enqueue_style(){
     wp_enqueue_style('simple-toolbar', WP_PLUGIN_URL . '/simple-toolbar/simple-toolbar.min.css', false );
-    wp_enqueue_style( 'prefix-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array());
+    wp_enqueue_style( 'prefix-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array());
 }
 
 add_action( 'wp_enqueue_scripts', 'wpa85495_enqueue_style' );
@@ -19,7 +19,7 @@ function simple_toolbar() {
 
 if ( is_user_logged_in() ) {
 
-//Current User EMail
+//current user email
     global $current_user;
     get_currentuserinfo();
     $email = $current_user->user_email;

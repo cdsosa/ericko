@@ -24,7 +24,6 @@
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
     <!-- FavIcons -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_template_directory_uri(); ?>/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_template_directory_uri(); ?>/favicons/apple-touch-icon-60x60.png">
@@ -53,28 +52,25 @@
 
 <body <?php body_class( $class ); ?> >
 
-<div class="grid nav-att">
-    <?php
-    wp_nav_menu(array(
-        'theme_location' => 'main_menu',
-        'container_class' => 'mainMenu',
-        'menu_class' => 'menu',
-        'before' => '<div class="selected btn">',
-        'after' => '<span class="icon-angle-right"></span></div>',
-        'items_wrap' => '<ul id="%1$s" class="">%3$s</ul>'
-    ));
-    ?>
-</div>
-
-
 <header>
 
     <div class="grid">
-
-        <a href="<?php echo site_url(); ?>">
-            <img class="logo" src="<?php the_field('logo','option'); ?>">
-            <p class="slogan">run. travel. code.</p>
-        </a>
+        <div class="grid nav-att">
+            <a href="<?php echo site_url(); ?>">
+                <img class="logo" src="<?php the_field('logo','option'); ?>">
+                <p class="slogan">run. travel. code.</p>
+            </a>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'main_menu',
+                'container_class' => 'mainMenu',
+                'menu_class' => 'menu',
+                'before' => '<div class="selected btn">',
+                'after' => '<span class="icon-angle-right"></span></div>',
+                'items_wrap' => '<ul id="%1$s" class="">%3$s</ul>'
+            ));
+            ?>
+        </div>
 
         <div class="mobileToggle">
             <i class="fa fa-bars fa-2x"></i>

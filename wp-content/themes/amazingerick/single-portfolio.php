@@ -4,7 +4,7 @@ get_header(); ?>
         <?php $image = get_field('hero_image');?>
 
 
-        <section class="slideImage small" style="background-image: url('<?php echo $image[url]; ?>')">
+        <section class="slideImage small parallax" style="background-image: url('<?php echo $image[url]; ?>')">
 
             <div class="tagline">
                 <h1><?php the_title(); ?></h1>
