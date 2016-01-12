@@ -4,9 +4,9 @@
 }
 
 body {
+  overflow-x: hidden;
   padding-top: 70px;
-  background-color: #ffffff;
-  .box-shadow(4px 4px 4px 4px #000000);
+  background-color: @carbon;
   @media screen and (max-width: @grid) {
     padding-top: 50px;
   }
@@ -16,7 +16,7 @@ section{
   width: 100%;
   z-index: 1;
   position: relative;
-  background-color: #ffffff;
+  background-color: @carbon;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -142,6 +142,6 @@ button {
 .full-width {
   .gradient (@primaryColor,darken(@primaryColor, 5%));
   h2{
-    color: #ffffff;
+    color: #ffffff !important;
   }
 }

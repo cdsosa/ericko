@@ -1,50 +1,94 @@
 .service-list {
-  overflow: hidden;
-  .gradient (@primaryColor,darken(@primaryColor, 10%));
-  padding: 60px 0;
+  display: inline-block;
+  background-color: @altLightGrey;
   h2{
     text-align: center;
     color:#ffffff;
     padding-bottom: 25px;
   }
-  .col-25 {
-    .box-sizing(border-box);
-    padding:0 20px;
-    background-color: #ffffff;
-    padding-top: 16px;
-    @media screen and (min-width: @grid) {
-      width: 23.5%;
-      margin-left: 2%;
-      min-height: 270px;
-      &:first-of-type {
-        margin-left: 0%;
-      }
-    }
+  .wrapper {
     @media screen and (max-width: @grid) {
-      width: 48%;
-      min-height: 250px;
-      margin-left: 2%;
-      margin-bottom: 30px;
-      &:nth-of-type(odd) {
-        margin-left: 0;
-      }
+      margin-top: -30px;
+    }
+  }
+  .col-25 {
+    float: left;
+    .box-sizing(border-box);
+    background-color: #ffffff;
+    @media screen and (min-width: @grid) {
+      width: 25%;
     }
     @media screen and (max-width: @tablet) {
+      width: 50%;
+      height: 200px;
+    }
+    @media screen and (max-width: @iphone5) {
       width: 100%;
       margin-left: 0;
     }
-  }
-  h4{
-    text-align: center;
-    line-height: 1.5em;
-    margin-bottom: 10px;
-    color: @primaryColor;
-  }
-  ul{
-    list-style-type: none;
-    text-align: center;
-    li{
-      line-height: 1.8em;
+    .feature {
+      height: 250px;
+      padding: 30px 5px 20px;
+      .box-sizing(border-box);
+      background-color: @primaryColor;
+      table {
+        height:100%;
+        width: 100%;
+        td{
+          vertical-align:middle;
+          height:100%;
+          text-align: center;
+          h4{
+            text-align: center;
+            line-height: 1.5em;
+            margin-bottom: 10px;
+            color: #ffffff;
+          }
+        }
+      }
+      ul{
+        list-style-type: none;
+        text-align: center;
+        li{
+          line-height: 1.5em;
+          color:#ffffff;
+          font-size: 1em;
+        }
+      }
+    }
+    .service-image{
+      background-position: center;
+      background-size: cover;
+      height: 250px;
+      position: relative;
+      .filter(grayscale(100%));
+      .transition(all, @duration);
+      &:hover{
+        .filter(none);
+        .transition(all, @duration);
+      }
+    }
+    @media screen and (min-width: @grid) {
+      &:first-of-type,
+      &:last-of-type {
+        margin-top: -30px;
+      }
+      &:first-of-type {
+        .feature {
+          height: 280px;
+        }
+        .service-image {
+          height: 250px;
+        }
+      }
+      &:last-of-type{
+        .feature {
+          height: 250px;
+        }
+        .service-image {
+          height: 280px;
+        }
+      }
     }
   }
 }

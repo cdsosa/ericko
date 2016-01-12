@@ -21,11 +21,12 @@ $the_query = new WP_Query(
     $i=1;
 
     if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post();
-        $i++;
+        $i++;w
         ?>
             <?php if(($i % 2) == 1) { ?>
                 <section class="services odd">
-                    <div class="wrapper" id="<?php the_title();?>">
+                    <a id="<?php echo urlencode(get_the_title());?>"></a>
+                    <div class="wrapper">
                         <div class="col-50">
                             <img src="<?php the_field('icon');?>">
                         </div>
@@ -44,7 +45,8 @@ $the_query = new WP_Query(
                 </section>
             <?php } else { ?>
                 <section class="services even">
-                    <div class="wrapper" id="<?php the_title();?>">
+                    <a id="<?php echo urlencode(get_the_title());?>"></a>
+                    <div class="wrapper">
                         <div class="col-50">
                             <h4><?php the_title();?></h4>
                             <?php the_content(); ?>

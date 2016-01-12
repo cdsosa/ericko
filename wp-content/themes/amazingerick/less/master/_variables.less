@@ -5,20 +5,21 @@
 @tablet: 768px;
 @min-tablet: 767px;
 @iphone: 400px;
+@iphone5: 320px;
 
 //Colors
-@primaryColor: #0088ba;
-@secondaryColor: #e1e1e1;
+@background: #3E4651;
+@primaryColor: #F1654C;
+@secondaryColor: #00B5B5;
 @textColor: #3b3b3b;
-@background: #fff;
 
 //RGBA Colors
-@primaryColor-rgba: rgba(0, 136, 186, 0.80);
+@primaryColor-rgba: rgba(241, 101, 76, 0.80);
 
 //Gradient
-@carbon: #3a3a3a;
-@altGrey: #969696;
-@altLightGrey: #f0f0f0;
+@carbon: #D4D4D4;
+@altGrey: lighten(@background, 10%);
+@altLightGrey: lighten(@background, 30%);
 @darkPrimary:darken(@primaryColor, 15%);
 @darkBackground: darken(@background, 10%);
 
@@ -27,5 +28,6 @@
 @primaryFont: 'Montserrat', sans-serif;
 @secondaryFont:'Open Sans', sans-serif;
 
+@duration-short:50ms;
 @duration:200ms;
 @duration-long:450ms;

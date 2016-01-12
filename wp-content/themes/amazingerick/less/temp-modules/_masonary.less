@@ -19,30 +19,35 @@
     @media screen and (max-width: @tablet) {
       width: 100%;
     }
-
     .post {
-      .gradient (@primaryColor,darken(@primaryColor, 10%));
-      padding: 20px;
-      h5{
-        color: @background;
-        text-transform: capitalize;
-        margin: 10px 0;
-        line-height: 1.2em;
+      background-color: @background;
+      .transition(all, @duration);
+      .slideImage {
+        height: 250px;
       }
-      p{
-        color: @background;
+      .text {
+        padding: 20px;
+        box-sizing: border-box;
+        color: @carbon;
+        .transition(all, @duration);
+        h5{
+          text-transform: capitalize;
+          margin: 10px 0;
+          line-height: 1.2em;
+        }
+      }
+      &:hover{
+        background-color: @primaryColor;
+        .transition(all, @duration);
+        .text {
+          color: #ffffff;
+          .transition(all, @duration);
+        }
+      }
+      &:active {
+        background-color: @secondaryColor;
+        .transition(all, @duration);
       }
     }
-
-    .slideImage {
-      margin-bottom: 40px;
-      height: 250px;
-    }
-
-    &:hover .content{
-      background-color: @darkPrimary;
-      .transition(all .4s)
-    }
-
   }
 }

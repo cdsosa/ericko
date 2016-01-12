@@ -62,7 +62,6 @@ wp_reset_postdata(); ?>
 
 <section class="service-list">
     <div class="wrapper">
-        <h2>Services</h2>
         <?php
         $the_query = new WP_Query(
             array(
@@ -70,18 +69,35 @@ wp_reset_postdata(); ?>
                 'posts_per_page' => -1,
                 'order'   => 'ASC', )
         );
-
-        if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <div class="col-25">
-                <h4><?php the_title();?></h4>
-                <ul>
-                    <?php if (get_field('feature-list')): ?>
-                        <?php while (have_rows('feature-list')): the_row(); ?>
-                            <li><?php the_sub_field('feature');?></li>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                </ul>
-            </div>
+        $i=0;
+        if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post();
+            $i++;
+            ?>
+            <?php if(($i % 2) == 1) { ?>
+                <a href="<?php the_field('url')?>" class="col-25">
+                    <div class="feature">
+                        <table>
+                            <td>
+                                <h4><?php the_title();?></h4>
+                            </td>
+                        </table>
+                    </div>
+                    <div class="service-image" style="background-image: url('<?php the_field('background')?>');">
+                    </div>
+                </a>
+            <?php } else { ?>
+                <a href="<?php the_field('url')?>" class="col-25">
+                    <div class="service-image" style="background-image: url('<?php the_field('background')?>');">
+                    </div>
+                    <div class="feature">
+                        <table>
+                            <td>
+                                <h4><?php the_title();?></h4>
+                            </td>
+                        </table>
+                    </div>
+                </a>
+            <?php } ?>
         <?php endwhile;  endif;
         wp_reset_postdata();
         ?>

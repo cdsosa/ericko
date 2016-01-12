@@ -13,6 +13,12 @@
     margin-right: 2%;
     margin-bottom: 2%;
     background-position: center;
+    .filter(grayscale(100%));
+    .transition(all, @duration);
+    &:hover{
+      .filter(none);
+      .transition(all, @duration);
+    }
     &:nth-of-type(3n+3){
       margin-right: 0;
     }
@@ -21,6 +27,7 @@
       margin-bottom: 30px;
     }
     .overlay{
+      display: none;
       position: absolute;
       background-color: @primaryColor-rgba;
       height: 100%;

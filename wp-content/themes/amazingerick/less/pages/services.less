@@ -6,22 +6,24 @@
       width: 250px;
       .transition(all, @duration-long);
   }
-  h4 {
-    color: @primaryColor;
+  a{
+    position: absolute;
+    top:-70px;
   }
   &.even {
     h4{
+      color: @background;
       &:after {
-        border-bottom: 2px solid @primaryColor;
+        border-bottom: 2px solid @background;
       }
     }
     ul li {
       color: #ffffff;
-      background-color: @primaryColor;
+      background-color: @background;
     }
   }
   &.odd{
-    .gradient (@primaryColor,darken(@primaryColor, 10%));
+    background-color: @background;
     h4{
       color: #ffffff;
       &:after {
@@ -30,7 +32,7 @@
     }
     ul li {
       background-color: #ffffff;
-      color: @primaryColor;
+      color: @background;
     }
     p{
       color: #ffffff;
@@ -47,10 +49,11 @@
       display: block;
     }
     h4 {
-      padding-bottom: px;
       margin-bottom: 20px;
+      font-size: 1.6em;
       &:after {
         content: '';
+        margin-top: 5px;
         display: block;
         width: 200px;
         margin-bottom: 20px;
@@ -58,7 +61,7 @@
       }
     }
     ul {
-      padding-top: 15px;
+      padding-top: 18px;
       li {
         font-size: .8em;
         display: inline-block;
@@ -69,7 +72,7 @@
       }
     }
     p{
-      font-size: 1.1em;
+      font-size: 1em;
     }
   }
 }
